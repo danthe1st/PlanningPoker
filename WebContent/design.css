@@ -1,0 +1,411 @@
+/*general*/
+body
+{
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	background-color: #aaa;
+	overflow-x: hidden;
+	position: relative;
+	font-size: 1.25em;
+	height: 90%;
+	background-color: #fefefe;
+	color: #111;
+	/*text-shadow: 0 0 20px yellow;*/
+}
+#bg/*Background*/
+{
+	background: /*url(./img/Muster.jpg)*/;
+	background-color: #aaa;
+	opacity: 0.125;
+	position: fixed;
+  	z-index: -1;
+  	top: -2.5%;
+  	left: -1.125%;
+  	width: 200%;
+  	height: 200%;
+}
+
+/*headers*/
+h1/*Program Name*/
+{
+	font-family: Interstate, FF Zine, Futura, FF Mark, Franklin Gothic, News Gothic, Officina Sans, Vectora, Avenir Roman, inherit;
+	font-size: 150%;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+h1:hover/*Effect: rotation, color-->red*/
+{
+	color:red;
+	transform: rotate(360deg);
+	transition-duration: 3s;
+	/*Kompabilitätsversionen*/
+	-webkit-transform: rotate(360deg);
+	-webkit-transition-duration: 3s;
+	-ms-transform: rotate(360deg);
+	-ms-transition-duration: 3s;
+	-o-transform: rotate(360deg);
+	-o-transition-duration: 3s;
+	
+}
+h2/*How difficult is it/Results*/
+{
+	font-family: FF Zine, Futura, FF Mark, Franklin Gothic, News Gothic, Officina Sans, Vectora, Avenir Roman, inherit;
+	font-size: 125%;
+	position: relative;
+	text-align: center;
+}
+h2:hover/*Effect: bigger, color-->blue*/
+{
+	color:blue;
+	transform: scale(1.25,1.25);
+	width: 80%;
+	left: 10%;
+	transition-duration: 2s;
+	/*Kompabilitätsversionen*/
+	-webkit-transform: scale(1.25,1.25);
+	-webkit-transition-duration: 0.5s;
+	-ms-transform: scale(1.25,1.25);
+	-ms-transition-duration: 0.5s;
+	-o-transform: scale(1.25,1.25);
+	-o-transition-duration: 0.5s;
+}
+h3:hover/*Please Register*/
+{
+	color: green;
+}
+table/*clear padding/margin of a table*/
+{
+	padding: 0;
+	margin: 0;
+}
+table */*the same for table elemants*/
+{
+	padding: 0;
+	margin: 0;
+}
+#result/*results table*/
+{
+	float: right;
+	background-color: #999;
+	font-weight: bolder;
+	text-align: center;
+	border: 2px solid gray;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+#result td:nth-child(even)/*every second column-->brighter*/
+{
+	background: #bbb;
+}
+#result tr:nth-child(even)/*every second row-->brighter*/
+{
+	background: #aaa;
+}
+#result tr:nth-child(even) td:nth-child(even)/*every second column in a 'second row' brighter-->brighter too*/
+{
+	background: #ccc;
+}
+#result tr+tr td/*row-border*/
+{
+	/*border-top: 1px solid #ccc;*/
+}
+#result td+td/*column-border*/
+{
+	border-left: 1px solid grey;
+}
+#result tr td
+{
+	padding: 1ex;
+}
+#result td.toLast/*extra information to the Last td(not very important info...)*/
+{
+	text-align: left;
+	opacity: 0.5;
+}
+.completed/*good result(if completed and not impossible): color-chancheing effect*/
+{
+	color: green;
+	/*animation-name: colorchange;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;*/
+}
+.impossible/*bad result(impossible)-->red*/
+{
+	color: red;
+}
+#chatFull/*chat(if enabled)*/
+{
+	width: auto;
+}
+#chatDisplay
+{
+	border: 0.25ex inset;
+	border-radius: 1.5ex;
+	width: 15em;
+	margin-right: auto;
+	word-wrap: break-word;
+}
+
+/*asides*/
+#help a
+{
+	background-color: yellow;
+	color: black;
+	float: right;
+	width: auto;
+}
+#help a:hover
+{
+	background-color: black;
+	color: yellow;
+}
+#name/*username and logout*/
+{
+	position: relative;
+	display: inline;;
+	float: right;
+	text-align: right;
+	max-width: 25%;
+}
+#name span/*username*/
+{
+	background-color:yellow;
+	color:black;
+}
+#name span:hover/*username-colorchange-effect(hover)*/
+{
+	background-color:black;
+	color:yellow;
+}
+#name input/*logout*/
+{
+	display: inline;
+}
+#name .adminName/*username(if Admin-Mode is allowed and the user has got Admin-Permissions)*/
+{
+	background: inherit;
+	color: red;
+}
+
+#users/*userlist*/
+{
+	display: inline-table;
+	/*background-image: url("./img/Matrix.gif");*/
+	background-color: #333333;
+	opacity: 0.5;
+	color: white;
+	float: right;
+	max-width:25%;
+	width: auto;
+	min-width: auto;
+	border: 1px solid grey;
+	overflow: auto;
+}
+#users.left
+{
+	float: none;
+	margin-left: 10%;
+}
+
+#users table/*table of the userlist*/
+{
+	width: auto;
+}
+#CheckOtherUsers
+{
+	background-color: white;
+	color: black;
+}
+.card-td/*the minicard-table-cell*/
+{
+	position: relative;
+	width: auto;
+	height: auto;
+	top: -5ex;
+}
+
+.kick-img/*img-input to kick other Players*/
+{
+	width: 24px;
+	height: 24px;
+}
+.kick-td/*table-cell for kick-button*/
+{
+	box-shadow: 0 0 0 2px white;
+	background-color: white;
+	border-bottom: 1px solid black;
+}
+.minicard/*card-img in the users-table*/
+{
+	position: relative;
+	bottom: -5ex;
+	border-bottom: 1px solid black;
+	float: right;
+	width: 5ex;
+	height: auto;
+	z-index: 5;
+}
+.minicard:hover
+{
+	transform: scale(1.25,1.25);
+}
+.minicard.problemCard
+{
+	border: 0.25ex solid red;
+}
+.minicard.goodCard
+{
+	border: 0.25ex solid green;
+}
+
+.name-td/*table cell for the username in the users table*/
+{
+	min-width: 10em;
+	width: auto;
+	text-align: left;
+	height: auto;
+	box-shadow: 0 0 0 2px  black;
+	background-color: black;
+	border-bottom: 1px solid white;
+}
+#users tr:nth-child(even) .name-td/*every second userneme-table-cell is brighter*/
+{
+	background-color: #222;
+}
+
+.name-td span/*username in its table-cell*/
+{
+	width: 90%;
+}
+.name-td .adminName/*special username-style for Admins(if enabled)*/
+{
+	font-weight: bolder;
+	color: yellow;
+}
+#users tfoot
+{
+	text-align: center;
+}
+#users tfoot tr+tr td+td
+{
+	border-top: 1px solid white;
+}
+#users tfoot td
+{
+	background: white;
+	color: black;
+	box-shadow: 0 0 0 2px white;
+}
+#users tfoot td+td
+{
+	background-color: #fff;
+	color: #000;
+	border-left: 1px solid black;
+	box-shadow: none;
+}
+
+/*inputs*/
+input/*inputs get the same background as the site*/
+{
+    background: inherit;
+    border-color: white;
+    border-spacing: 1px;
+}
+#buttonsIn/*Stop, Refresh, Start*/
+{
+	display: inline;
+	float: left;
+}
+#buttonsIn form/*Stop, Refresh, Start*/
+{
+	display: inline;
+}
+#buttonsIn input/*Stop, Refresh, Start buttons*/
+{
+	height: 40%;
+}
+
+/*Cards*/
+.card/*img-input for the Cards(child of #CardSelector*/
+{
+	width: 9.4%;
+	min-width: 5em;
+}
+.card:hover
+{
+	transform: scale(1.25);
+}
+/*#Cardlist *:target
+{
+	transform: scale(1.125,1.125);
+}*/
+.avgCard{
+	transform:scale(1.25,1.25);
+}
+#CardSelector/*Wrapper Element for the Card-Input*/
+{
+	display: inline-block;
+	width: 65%;
+	text-align: center;
+}
+#cardInput/*hidden*/
+{
+	display: none;
+}
+/*#singleCard
+{
+	width: 15%;
+}*/
+
+#Cardlist/*Cardlist in Registration/Results-side*/
+{
+	display: block;
+	width: 75%;
+	transform:scale(0.75,0.75);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.75;
+}
+#Cardlist img/*Card in the Cardlist*/
+{
+	min-width: 5em;
+	width: 9.6%;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+/*footer(Copyright)*/
+footer
+{
+	
+	position: fixed;
+	width: 50%;
+	left: 25%;
+	margin-top: inherit;
+	bottom: 0;
+	height: auto;
+	margin-bottom: auto;
+	text-align: center;
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#placeHolderFooter
+{
+	visibility: hidden;
+	width: 100%;
+}
+
+
+
+
+/*Animations*/
+@keyframes colorchange/*Animation for the good result*/
+{
+    0%   {color: red;}
+    25%  {color: yellow;}
+    50%  {color: green;}
+    100% {color: blue;}
+}

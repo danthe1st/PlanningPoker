@@ -1,0 +1,4 @@
+Mindestgröße des Browserfensters(px): 320×480px
+HTNL5 unterstützender Browser
+Javaskript aktiviert
+Cookies aktiviert(Session-Cookie)
