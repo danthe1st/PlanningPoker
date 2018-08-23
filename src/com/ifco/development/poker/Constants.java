@@ -16,20 +16,21 @@ public class Constants {
 	 */
 	static {
 		dateiformat.clear();
-		dateiformat.put("Idle", ".gif");
-		dateiformat.put("Unknown", ".jpg");
-		dateiformat.put("Coffee", ".jpg");
-		dateiformat.put("0", ".jpg");
-		dateiformat.put("1", ".jpg");
-		dateiformat.put("2", ".jpg");
-		dateiformat.put("3", ".jpg");
-		dateiformat.put("5", ".jpg");
-		dateiformat.put("8", ".jpg");
-		dateiformat.put("20", ".jpg");
-		dateiformat.put("40", ".jpg");
-		dateiformat.put("100", ".jpg");
-		dateiformat.put("Infinity", ".jpg");
-		dateiformat.put("Back", ".jpg");
+		dateiformat.put("Idle", ".jpg");
+		dateiformat.put("Unknown", ".png");
+		dateiformat.put("Coffee", ".png");
+		dateiformat.put("0", ".png");
+		dateiformat.put("1", ".png");
+		dateiformat.put("2", ".png");
+		dateiformat.put("3", ".png");
+		dateiformat.put("5", ".png");
+		dateiformat.put("8", ".png");
+		dateiformat.put("13", ".png");
+		dateiformat.put("20", ".png");
+		dateiformat.put("40", ".png");
+		dateiformat.put("100", ".png");
+		dateiformat.put("Infinity", ".png");
+		dateiformat.put("Back", ".png");
 		dateiformat.put("DEFAULT", ".jpg");
 	}
 
