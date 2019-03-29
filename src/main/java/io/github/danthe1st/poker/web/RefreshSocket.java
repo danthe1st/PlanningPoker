@@ -16,30 +16,38 @@ import javax.websocket.server.ServerEndpoint;
 public class RefreshSocket {
 	private static List<Session> sessions=new ArrayList<>();
 	public static void reloadAll() {
-		for (Session session : sessions) {
-			try {
-				if(session.isOpen()) {
-					session.getBasicRemote().sendText("Reload");
+		synchronized(sessions) {
+			for (Session session : sessions) {
+				try {
+					if(session.isOpen()) {
+						session.getBasicRemote().sendText("Reload");
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
 				}
-			} catch (IOException e) {
-				e.printStackTrace();
 			}
 		}
 	}
 	
     @OnOpen
-    public void onOpen(Session session, EndpointConfig endpointConfig) {
-    	if (!sessions.contains(session)) {
-			sessions.add(session);
-		}
+    public synchronized void onOpen(Session session, EndpointConfig endpointConfig) {
+    	synchronized(sessions) {
+    		if (!sessions.contains(session)) {
+    			sessions.add(session);
+    		}
+    	}
+    	
     }
     @OnError
-    public void onError(Session session, Throwable throwable) {
+    public synchronized void onError(Session session, Throwable throwable) {
     }
     @OnClose
-    public void onClose(Session session, CloseReason closeReason) {
-    	if (sessions.contains(session)) {
-			sessions.remove(session);
-		}
+    public synchronized void onClose(Session session, CloseReason closeReason) {
+    	synchronized(sessions) {
+    		if (sessions.contains(session)) {
+    			sessions.remove(session);
+    		}
+    	}
+    	
     }
 }

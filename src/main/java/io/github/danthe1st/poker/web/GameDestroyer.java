@@ -28,7 +28,7 @@ public class GameDestroyer implements EventListener, HttpSessionListener{
 		}
 		if(!g.hasUsers()) {
 			se.getSession().getServletContext().removeAttribute("GAME");
-			System.out.println("deleted Game becouse no users playing");
+			System.out.println("deleted Game because no users playing");
 		}else {
 			RefreshSocket.reloadAll();
 		}
