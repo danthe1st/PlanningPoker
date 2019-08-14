@@ -1,0 +1,63 @@
+ADMIN
+	Status:
+		standardmäßig deaktiviert(Property)
+			Kann Problemlos aktiviert werden
+		funktioniert
+	Beschreibung: 
+		Admin-Modus, der von jedem Spieler aktiviert werden kann, der wei� wie.
+		Der Name eines Admins hat eine andere Farbe(sowohl bei der Benutzerliste als auch bei der anzeige des eignen Namens).
+		Der kick-Button ist bei Admins deaktiviert.
+	Anmerkungen:
+		nicht nötig
+
+CHAT
+	Status:
+		standardmäßig deaktiviert(Property)
+			Kann Problemlos aktiviert werden
+		funktioniert
+	Beschreibung:
+		Ein in-game-Chat, bei dem jeder Spieler eine Broadcast-Nachricht schreiben kann.
+	Anmerkungen:
+		abgelehnt/nich nötig/zu kompliziert
+		
+ZUSCHAUERMODUS
+	Status:
+		nicht implementiert
+	Beschreibung:
+		Der Zuschauermodus wird durch Eingabe eines leeren Benutzernamen beim Registrieren hervorgerufen.
+		Der Zuschauer hat somit den Benutzernamen "".
+		Ein Zuschauer sieht das Spiel wie ein Spieler.
+		Er sieht die Karten ebenso erst nach dem Stop des Spiels.
+		Er wird nicht von anderen Spielern gesehen(erscheint nicht in der Benutzerliste)
+	Mögliche Erweiterungen:
+		Buttons automatisch deaktiviert/Unsichtbar
+	Anmerkungen:
+		abgelehnt/nicht nötig
+
+BENUTZERVERBOT/USERBAN
+	Status:
+		nicht implementiert
+	Beschreibung:
+		Ein Benutzername kann verboten werden.
+		Ein möglicher Benutzer mit diesem Namen wird unregistriert.
+		Man kann sich NICHT mit einem verbotenen Benutzer anmelden.
+	Mögliche Erweiterungen:
+		Liste der verbotenen Benutzernamen
+		Rückerlauben von Benutzernamen
+		Zeitlimit für Verbote
+	Anmerkungen:
+		möglich, aber nicht nötig
+
+		
+		
+
+MUSTERERWEITERUNG:
+	Status:
+		aktiviert/deaktiviert/nicht Programmiert/in Arbeit/...
+		funktioniert/funktioniert nicht
+	Beschreibung:
+		Hier wird die Erweiterung Genauer beschrieben.
+	Mögliche Erweiterungen:
+		Hier stehen mögliche Erweiterungen für diese Erweiterung.
+	Anmerkungen:
+		z.B. Fehler...

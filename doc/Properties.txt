@@ -1,0 +1,35 @@
+﻿Format: <Key>=<Standardvalue>(<mögliche Values>)
+
+io.github.danthe1st.poker.admin_allowed=false				(any boolean String)
+io.github.danthe1st.poker.chat_enabled=false				(any boolean String)
+io.github.danthe1st.poker.timeout_enabled=false			(any boolean String)
+io.github.danthe1st.poker.StopGameWithoutCardAllowed=true	(any boolean String)
+io.github.danthe1st.poker.maxChatMsgs=10				(any unsigned int String without 0)
+io.github.danthe1st.poker.maxCharsAllowedIn=46				(any unsigned int String without 0)
+io.github.danthe1st.poker.maxUsers=<max Integer Value/0>		(any unsigned int String)
+io.github.danthe1st.poker.idleTime=<max Integer Value/0>		(any unsigned long String)
+
+description:
+	io.github.danthe1st.poker.admin_allowed
+		Adminmodus(siehe Erweiterungen) aktiviert("true") oder deaktiviert("false")
+	io.github.danthe1st.poker.chat_enabled
+		Broadcast-Chat(siehe Erweiterungen) aktiviert("true") oder deaktiviert("false")
+	io.github.danthe1st.poker.timeout_enabled
+		Timeout aktiviert(true) oder deaktiviert(false)
+	io.github.danthe1st.poker.StopGameWithoutCardAllowed
+		true: manueller Spielstopp immer möglich(auch wenn kein/Kaffee Karte gespielt wurde)
+		false: manueller Spielstopp nicht möglich wenn keine Karte oder die Kaffeekarte gespielt wurde
+	io.github.danthe1st.poker.refreshTime
+		Zeit zwischen automatischen Page-Refreshes auf der Hauptseite
+	io.github.danthe1st.poker.maxChatMsgs
+		Maximale anzahl von gespeicherten Chatnachrichten
+	io.github.danthe1st.poker.maxCharsAllowedIn
+		Maximale Anzahl von Zeichen in einer Eingabe
+	io.github.danthe1st.poker.maxUsers
+		Maximale Anzahl der Benutzer
+			0-->max. int-Value
+			Bei Login + maxUsers erreicht:
+				Fehlernachricht: Overflow Error
+	io.github.danthe1st.poker.idleTime
+		Zeit, nach der ein Benutzer automatisch gekickt wird
+			0-->max. long-Value(Timeout-kick tritt nie in Kraft)

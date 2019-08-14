@@ -7,7 +7,6 @@ public class PokerProperties {
 	private static final boolean CHAT_ENABLED=false;
 	private static final boolean TIMEOUT_ENABLED=false;
 	private static final boolean STOP_GAME_WITHOUT_CARD_ALLOWED=true;
-	private static final int REFRESH_TIME=10;
 	private static final int MAX_CHAT_MSGS = 10;
 	private static final int MAX_CHARS_ALLOWED_IN=46;
 	private static final int MAX_USERS=Integer.MAX_VALUE;
@@ -22,9 +21,9 @@ public class PokerProperties {
 	 * 	setze Propertie auf Standardwert und gebe diesen zur�ck
 	 */
 	public static boolean getAdminAllowed() {
-		final String AdminAllowed=System.getProperty("com.ifco.development.poker.admin_allowed");
+		final String AdminAllowed=System.getProperty("io.github.danthe1st.poker.admin_allowed");
 		if(AdminAllowed==null) {
-			System.setProperty("com.ifco.development.poker.admin_allowed", String.valueOf(ADMIN_ALLOWED));
+			System.setProperty("io.github.danthe1st.poker.admin_allowed", String.valueOf(ADMIN_ALLOWED));
 			return ADMIN_ALLOWED;
 		}
 		if(AdminAllowed.equals("true")) {
@@ -36,9 +35,9 @@ public class PokerProperties {
 		return ADMIN_ALLOWED;
 	}
 	public static boolean getChatEnabled() {
-		final String ChatEnabled=System.getProperty("com.ifco.development.poker.chat_enabled");
+		final String ChatEnabled=System.getProperty("io.github.danthe1st.poker.chat_enabled");
 		if(ChatEnabled==null) {
-			System.setProperty("com.ifco.development.poker.chat_enabled", String.valueOf(CHAT_ENABLED));
+			System.setProperty("io.github.danthe1st.poker.chat_enabled", String.valueOf(CHAT_ENABLED));
 			return CHAT_ENABLED;
 		}
 		if(ChatEnabled.equals("true")) {
@@ -50,9 +49,9 @@ public class PokerProperties {
 		return CHAT_ENABLED;
 	}
 	public static boolean getTimeoutEnabled() {
-		final String timeoutEnabled=System.getProperty("com.ifco.development.poker.timeout_enabled");
+		final String timeoutEnabled=System.getProperty("io.github.danthe1st.poker.timeout_enabled");
 		if(timeoutEnabled==null) {
-			System.setProperty("com.ifco.development.poker.timeout_enabled", String.valueOf(CHAT_ENABLED));
+			System.setProperty("io.github.danthe1st.poker.timeout_enabled", String.valueOf(CHAT_ENABLED));
 			return TIMEOUT_ENABLED;
 		}
 		try {
@@ -62,9 +61,9 @@ public class PokerProperties {
 		}
 	}
 	public static boolean getStopGameWithoutCardAllowed() {
-		final String stop=System.getProperty("com.ifco.development.poker.StopGameWithoutCardAllowed");
+		final String stop=System.getProperty("io.github.danthe1st.poker.StopGameWithoutCardAllowed");
 		if(stop==null) {
-			System.setProperty("com.ifco.development.poker.StopGameWithoutCardAllowed", String.valueOf(STOP_GAME_WITHOUT_CARD_ALLOWED));
+			System.setProperty("io.github.danthe1st.poker.StopGameWithoutCardAllowed", String.valueOf(STOP_GAME_WITHOUT_CARD_ALLOWED));
 			return STOP_GAME_WITHOUT_CARD_ALLOWED;
 		}
 		try {
@@ -73,27 +72,10 @@ public class PokerProperties {
 			return STOP_GAME_WITHOUT_CARD_ALLOWED;
 		}
 	}
-	public static int getRefreshTime() {
-		final String refreshTime=System.getProperty("com.ifco.development.poker.refreshTime");
-		
-		if(refreshTime==null) {
-			System.setProperty("com.ifco.development.poker.refreshTime", String.valueOf(REFRESH_TIME));
-			return REFRESH_TIME;
-			
-		}
-		try {
-			if(Integer.parseInt(refreshTime)>=0) {
-				return Integer.parseInt(refreshTime);
-			}
-			return REFRESH_TIME;
-		} catch (final NumberFormatException e) {
-			return REFRESH_TIME;
-		}
-	}
 	public static int getMaxChatMsgs() {
-		final String maxMsgs=System.getProperty("com.ifco.development.poker.maxChatMsgs");
+		final String maxMsgs=System.getProperty("io.github.danthe1st.poker.maxChatMsgs");
 		if(maxMsgs==null) {
-			System.setProperty("com.ifco.development.poker.maxChatMsgs", String.valueOf(MAX_CHAT_MSGS));
+			System.setProperty("io.github.danthe1st.poker.maxChatMsgs", String.valueOf(MAX_CHAT_MSGS));
 			return MAX_CHAT_MSGS;
 		}
 		try {
@@ -106,9 +88,9 @@ public class PokerProperties {
 		}
 	}
 	public static int getMaxCharactarsAllowedIn() {
-		final String maxChars=System.getProperty("com.ifco.development.poker.maxCharsAllowedIn");
+		final String maxChars=System.getProperty("io.github.danthe1st.poker.maxCharsAllowedIn");
 		if(maxChars==null) {
-			System.setProperty("com.ifco.development.poker.maxCharsAllowedIn", String.valueOf(MAX_CHARS_ALLOWED_IN));
+			System.setProperty("io.github.danthe1st.poker.maxCharsAllowedIn", String.valueOf(MAX_CHARS_ALLOWED_IN));
 			return MAX_CHARS_ALLOWED_IN;
 		}
 		try {
@@ -121,9 +103,9 @@ public class PokerProperties {
 		}
 	}
 	public static int getMaxUsers() {
-		final String maxUsers=System.getProperty("com.ifco.development.poker.maxUsers");
+		final String maxUsers=System.getProperty("io.github.danthe1st.poker.maxUsers");
 		if(maxUsers==null) {
-			System.setProperty("com.ifco.development.poker.maxUsers", String.valueOf(MAX_USERS));
+			System.setProperty("io.github.danthe1st.poker.maxUsers", String.valueOf(MAX_USERS));
 			return MAX_USERS;
 		}
 		try {
@@ -139,9 +121,9 @@ public class PokerProperties {
 		}
 	}
 	public static long getIdleTime() {
-		final String IdleTime=System.getProperty("com.ifco.development.poker.idleTime");
+		final String IdleTime=System.getProperty("io.github.danthe1st.poker.idleTime");
 		if(IdleTime==null) {
-			System.setProperty("com.ifco.development.poker.idleTime", String.valueOf(IDLE_TIME));
+			System.setProperty("io.github.danthe1st.poker.idleTime", String.valueOf(IDLE_TIME));
 			return IDLE_TIME;
 		}
 		try {
